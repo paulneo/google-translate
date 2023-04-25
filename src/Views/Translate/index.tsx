@@ -1,12 +1,11 @@
-import { Box, useColorMode,Flex } from '@chakra-ui/react';
-import Form from './form'
+import { Box, Flex, useColorMode } from '@chakra-ui/react';
+import Form from './form';
 
 const Translate = () => {
 	const { toggleColorMode } = useColorMode();
 	return (
-			<Flex  align="center" justify="center" height={'100vh'}>
-
-				{/* <Text
+		<Flex align="center" justify="center" height={'100vh'}>
+			{/* <Text
 					bgGradient="linear(to-l, green.600, yellow.800)"
 					bgClip="text"
 					fontSize="4xl"
@@ -17,14 +16,13 @@ const Translate = () => {
 				<Button colorScheme='blue' variant='solid' onClick={toggleColorMode}>
 					change color
 				</Button> */}
-				<Box>
-					<Form/>
-				</Box>
-				<Box>
-					<Form/>
-					
-				</Box>
-			</Flex>
+			<Box>
+				<Form />
+			</Box>
+			<Box>
+				<Form />
+			</Box>
+		</Flex>
 	);
 };
 
