@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import { extendTheme } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
 import App from './App.tsx';
 import './index.css';
 
@@ -20,15 +19,15 @@ const styles = {
 	global: (props: any) => ({
 		body: {
 			fontFamily: 'body',
-			color: mode('gray.400', 'whiteAlpha.900')(props),
-			bg: props.colorMode === 'dark' ? 'white' : 'gray.800',
+			// color: mode('gray.400', 'whiteAlpha.900')(props),
+			// bg: props.colorMode === 'dark' ? 'white' : 'gray.800',
 			lineHeight: 'base',
 		},
 		'*::placeholder': {
-			color: mode('gray.400', 'whiteAlpha.400')(props),
+			// color: mode('gray.400', 'whiteAlpha.400')(props),
 		},
 		'*, *::before, &::after': {
-			borderColor: mode('gray.200', 'whiteAlpha.300')(props),
+			// borderColor: mode('gray.200', 'whiteAlpha.300')(props),
 			wordWrap: 'break-word',
 		},
 	}),

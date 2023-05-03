@@ -1,4 +1,4 @@
-import { Box, Flex, Icon, useColorMode } from '@chakra-ui/react';
+import { Box, Button, Flex, Icon, Text, useColorMode } from '@chakra-ui/react';
 import { FaExchangeAlt } from 'react-icons/fa';
 import Form from './form';
 import TranslateCard from './translateCard';
@@ -25,17 +25,17 @@ const Translate = () => {
 					<TranslateCard />
 				</Flex>
 			</Box>
-			{/* <Text
-					bgGradient="linear(to-l, green.600, yellow.800)"
-					bgClip="text"
-					fontSize="4xl"
-					fontWeight="extrabold"
-				>
-					Google translate
-				</Text>
-				<Button colorScheme='blue' variant='solid' onClick={toggleColorMode}>
-					change color
-				</Button> */}
+			<Text
+				bgGradient="linear(to-l, green.600, yellow.800)"
+				bgClip="text"
+				fontSize="4xl"
+				fontWeight="extrabold"
+			>
+				Google translate
+			</Text>
+			<Button colorScheme='blue' variant='solid' onClick={toggleColorMode}>
+				change color
+			</Button>
 		</Box>
 	);
 };
