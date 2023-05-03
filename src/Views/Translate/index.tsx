@@ -1,11 +1,30 @@
 import { Box, Flex, Icon, useColorMode } from '@chakra-ui/react';
 import { FaExchangeAlt } from 'react-icons/fa';
 import Form from './form';
+import TranslateCard from './translateCard';
 
 const Translate = () => {
 	const { toggleColorMode } = useColorMode();
 	return (
-		<Flex align="center" justify="center" height={'100vh'} gap={5}>
+		<Box
+			height={'100vh'}
+			gap={5}
+			display={'flex'}
+			flexDirection={'column'}
+			alignItems={'center'}
+			justifyContent={'center'}
+		>
+			<Box w={800}>
+				<Flex align={'center'} gap={5}>
+					<Form />
+					<Icon as={FaExchangeAlt} />
+					<Form />
+				</Flex>
+				<Flex justify={'space-between'} gap={50}>
+					<TranslateCard />
+					<TranslateCard />
+				</Flex>
+			</Box>
 			{/* <Text
 					bgGradient="linear(to-l, green.600, yellow.800)"
 					bgClip="text"
@@ -17,16 +36,7 @@ const Translate = () => {
 				<Button colorScheme='blue' variant='solid' onClick={toggleColorMode}>
 					change color
 				</Button> */}
-			<Box>
-				<Form />
-			</Box>
-			<Box>
-				<Icon as={FaExchangeAlt} />
-			</Box>
-			<Box>
-				<Form />
-			</Box>
-		</Flex>
+		</Box>
 	);
 };
 
